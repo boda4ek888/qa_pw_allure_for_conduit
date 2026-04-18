@@ -69,8 +69,8 @@ export class SettingsPage {
   }
 
   async assertBioValue(bio) {
-    await test.step(`Assert the 'BioValue' field value`, async () => {
+    await test.step("Assert the 'Bio' field value", async () => {
       await expect(this.bioField).toHaveValue(bio);
-    })
+    });
   }
 }

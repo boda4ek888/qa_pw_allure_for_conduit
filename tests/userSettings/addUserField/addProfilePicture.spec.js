@@ -6,7 +6,7 @@ test.beforeEach(async ({ page, user }) => {
   await signUpUser(page, user);
 });
 
-test('Add Profile picture from settings', async ({
+test('Add profile picture URL from settings', async ({
   profilePage,
   settingsPage,
   user,
