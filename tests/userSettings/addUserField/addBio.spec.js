@@ -6,7 +6,7 @@ test.beforeEach(async ({ page, user }) => {
   await signUpUser(page, user);
 });
 
-test('Add short from settings', async ({
+test('Add short bio from settings', async ({
   profilePage,
   settingsPage,
   user,

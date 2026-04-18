@@ -4,9 +4,9 @@ import { ProfilePage } from '../../src/ui/pages/ProfilePage';
 import { SettingsPage } from '../../src/ui/pages/SettingsPage';
 
 export const test = base.extend<{
-  homePage;
-  profilePage;
-  settingsPage;
+  homePage: HomePage;
+  profilePage: ProfilePage;
+  settingsPage: SettingsPage;
 }>({
   homePage: async ({ page }, use) => {
     const homePage = new HomePage(page);

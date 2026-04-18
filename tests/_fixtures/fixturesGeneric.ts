@@ -1,4 +1,4 @@
-import { test as base } from '@playwright/test';
+import { Page, test as base } from '@playwright/test';
 import { Logger } from '../../src/common/logger/Logger';
 import { generateNewUserData } from '../../src/common/testData/generateNewUserData';
 import * as allure from 'allure-js-commons';
@@ -6,18 +6,20 @@ import { parseTestTreeHierarchy } from '../../src/common/helpers/allureHelpers';
 import fs from 'fs';
 import path from 'path';
 
+type UserData = { username: string; email: string; password: string };
+
 export const test = base.extend<
   {
-    usersNumber;
-    contextsNumber;
-    pages;
-    user;
-    users;
-    infoTestLog;
-    addAllureTestHierarchy;
+    usersNumber: number;
+    contextsNumber: number;
+    pages: Page[];
+    user: UserData;
+    users: UserData[];
+    infoTestLog: string;
+    addAllureTestHierarchy: string;
   },
   {
-    logger;
+    logger: Logger;
     cleanAllureResults: void;
   }
 >({
