@@ -9,7 +9,7 @@ test.beforeEach(async ({ page, user }) => {
 test('Add short bio from settings', async ({
   profilePage,
   settingsPage,
-  user,
+  user
 }) => {
   const bio = faker.lorem.paragraph();
 
